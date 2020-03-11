@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterMain.master.cs" Inherits="HospitalMessenger.MasterMain" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Hospital Messenger</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../font/css/fontello.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' />
+</head>
+
+
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav nav-collapse pull-left">
+                    <li><a href="../Main.aspx">Main</a></li>                    
+                    <li><a href="../Register.aspx"><i class="icon-user"></i>Register</a></li>
+                    <li><a href="../About.aspx"><i class="icon-trophy"></i>About</a></li>
+                    <li><a href="../Contact.aspx"><i class="icon-doc-text"></i>Contact</a></li>
+                </ul>
+                <div class="nav-collapse collapse"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container profile">
+        <div style="text-align:center">
+            <img src="../img/mini.jpg" alt=""/>
+        </div>
+        
+    </div>
+      <form id="main" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="mainBody" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="footer" href="..css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <div class="container">
+        <p class="pull-right"><a>COPYRIGHT 2016</a></p>
+    </div>
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('#myModal').modal('hidden')
+    </script>
+</body>
+</html>
